@@ -1,0 +1,242 @@
+[
+  {
+    "model": "book.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Great Gatsby",
+      "author": 5,
+      "ISBN": "978-0743273565",
+      "category": "Fiction",
+      "availability_status": true,
+      "created_at": "2024-01-15T10:30:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 2,
+    "fields": {
+      "title": "To Kill a Mockingbird",
+      "author": 3,
+      "ISBN": "978-0061120084",
+      "category": "Fiction",
+      "availability_status": true,
+      "created_at": "2024-01-15T10:35:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 3,
+    "fields": {
+      "title": "1984",
+      "author": 2,
+      "ISBN": "878-51524935",
+      "category": "Dystopian",
+      "availability_status": false,
+      "created_at": "2024-01-15T10:40:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 4,
+    "fields": {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": 1,
+      "ISBN": "978-0747532699",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T10:45:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 5,
+    "fields": {
+      "title": "Harry Potter and the Chamber of Secrets",
+      "author": 1,
+      "ISBN": "978-0747538494",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T10:50:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Hobbit",
+      "author": 4,
+      "ISBN": "978-0547928227",
+      "category": "Fantasy",
+      "availability_status": false,
+      "created_at": "2024-01-15T10:55:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 7,
+    "fields": {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "author": 4,
+      "ISBN": "978-0544003415",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:00:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 8,
+    "fields": {
+      "title": "The Lord of the Rings: The Two Towers",
+      "author": 4,
+      "ISBN": "978-0544003422",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:05:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 9,
+    "fields": {
+      "title": "The Lord of the Rings: The Return of the King",
+      "author": 4,
+      "ISBN": "978-0544003439",
+      "category": "Fantasy",
+      "availability_status": false,
+      "created_at": "2024-01-15T11:10:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 10,
+    "fields": {
+      "title": "Animal Farm",
+      "author": 2,
+      "ISBN": "978-0451526342",
+      "category": "Dystopian",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:15:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 11,
+    "fields": {
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "author": 1,
+      "ISBN": "978-0747542699",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:20:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 12,
+    "fields": {
+      "title": "Harry Potter and the Goblet of Fire",
+      "author": 1,
+      "ISBN": "978-0747546894",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:25:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 13,
+    "fields": {
+      "title": "Harry Potter and the Order of the Phoenix",
+      "author": 1,
+      "ISBN": "978-0747551997",
+      "category": "Fantasy",
+      "availability_status": false,
+      "created_at": "2024-01-15T11:30:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 14,
+    "fields": {
+      "title": "Harry Potter and the Half-Blood Prince",
+      "author": 1,
+      "ISBN": "978-0747581116",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:35:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 15,
+    "fields": {
+      "title": "Harry Potter and the Deathly Hallows",
+      "author": 1,
+      "ISBN": "978-0747591818",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:40:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 16,
+    "fields": {
+      "title": "The Silmarillion",
+      "author": 4,
+      "ISBN": "978-0544003448",
+      "category": "Fantasy",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:45:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 17,
+    "fields": {
+      "title": "Tender Is the Night",
+      "author": 5,
+      "ISBN": "978-0743273572",
+      "category": "Fiction",
+      "availability_status": true,
+      "created_at": "2024-01-15T11:50:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 18,
+    "fields": {
+      "title": "This Side of Paradise",
+      "author": 5,
+      "ISBN": "978-0743273589",
+      "category": "Fiction",
+      "availability_status": false,
+      "created_at": "2024-01-15T11:55:00Z"
+    }
+  },
+  {
+    "model": "book.book",
+    "pk": 19,
+    "fields": {
+      "title": "Politics and the English Language",
+      "author": 2,
+      "ISBN": "978-0152605",
+      "category": "Essay",
+      "availability_status": true,
+      "created_at": "2024-01-15T12:00:00Z"
+        }
+  },
+  {
+    "model": "book.book",
+    "pk": 20,
+    "fields": {
+      "title": "Go Set a Watchman",
+      "author": 3,
+      "ISBN": "978-0062409911",
+      "category": "Fiction",
+      "availability_status": true,
+      "created_at": "2024-01-15T12:05:00Z"
+    }
+  }
+]

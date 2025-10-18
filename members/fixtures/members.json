@@ -1,0 +1,52 @@
+[
+  {
+    "model": "members.member",
+    "pk": 1,
+    "fields": {
+      "name": "John Doe",
+      "email": "john.doe@email.com",
+      "membership_date": "2025-01-05",
+      "active_status": true
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 2,
+    "fields": {
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@email.com",
+      "membership_date": "2025-01-10",
+      "active_status": true
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 3,
+    "fields": {
+      "name": "Michael Chen",
+      "email": "michael.chen@email.com",
+      "membership_date": "2024-12-15",
+      "active_status": true
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 4,
+    "fields": {
+      "name": "Emily Williams",
+      "email": "emily.williams@email.com",
+      "membership_date": "2024-11-20",
+      "active_status": false
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 5,
+    "fields": {
+      "name": "David Smith",
+      "email": "david.smith@email.com",
+      "membership_date": "2025-01-01",
+      "active_status": true
+    }
+  }
+]
