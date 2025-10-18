@@ -1,11 +1,13 @@
 from django.urls import path, include
 from book.views import BookViewSet
-from borrow.views import BorrowItemViewSet, BorrowRecordViewSet
+from borrow.views import BorrowItemViewSet, BorrowRecordViewSet, ReturnViewSet
 from rest_framework_nested import routers
 
 router = routers.DefaultRouter()
 router.register('books', BookViewSet, basename='books')
 router.register('borrows', BorrowRecordViewSet, basename='borrows')
+router.register('returns', ReturnViewSet, basename='returns')
+
 
 
 
