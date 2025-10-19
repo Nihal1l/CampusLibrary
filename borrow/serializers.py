@@ -53,6 +53,11 @@ class UpdateBorrowItemSerializer(serializers.ModelSerializer):
         model = BorrowItem
         fields = ['quantity']
 
+class UpdateBorrowSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = BorrowRecord
+        fields = ['status']
 
 class BorrowItemSerializer(serializers.ModelSerializer):
     book = SimpleBookSerializer()

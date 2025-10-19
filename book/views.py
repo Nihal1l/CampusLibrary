@@ -18,19 +18,4 @@ class BookViewSet(ModelViewSet):
     search_fields = ['title', 'author__name']
     ordering_fields = ['created_at']
 
-    # def destroy(self, request, *args, **kwargs):
-    #     book = self.get_object()
-    #     if book.stock > 10:
-    #         return Response({'message': "Book with stock more than 10 could not be deleted"})
-    #     self.perform_destroy(book)
-    #     return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-# class ReviewViewSet(ModelViewSet):
-#     serializer_class = ReviewSerializer
-
-#     def get_queryset(self):
-#         return Review.objects.filter(product_id=self.kwargs['product_pk'])
-
-#     def get_serializer_context(self):
-#         return {'product_id': self.kwargs['product_pk']}
+   

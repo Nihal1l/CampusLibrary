@@ -1,36 +1,45 @@
 from django.shortcuts import render
 from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, DestroyModelMixin
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
-from borrow.serializers import AddBorrowItemSerializer, BorrowItemSerializer, BorrowSerializer, UpdateBorrowItemSerializer
+from borrow.serializers import AddBorrowItemSerializer, BorrowItemSerializer, BorrowSerializer, UpdateBorrowItemSerializer, UpdateBorrowSerializer
 from borrow.models import BorrowItem, BorrowRecord 
 from datetime import datetime
 # Create your views here.
 
 
-class BorrowRecordViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
+class BorrowRecordViewSet(ModelViewSet):
 
-    
-    queryset = BorrowRecord.objects.all()
+    http_method_names = ['get', 'post', 'patch', 'delete']
     serializer_class = BorrowSerializer
 
-class ReturnViewSet(ModelViewSet):
-    http_method_names = ['post', 'delete', 'get']
-    serializer_class = BorrowSerializer  # Adjust based on your needs
+    def get_serializer_class(self):
+        if self.request.method == 'PATCH':
+            return UpdateBorrowSerializer
+        
+        return BorrowSerializer
 
     def get_queryset(self):
-        # Filter returns for a specific borrow if borrow_pk is provided
-        borrow_pk = self.kwargs.get('borrow_pk')
-        if borrow_pk:
-            return BorrowRecord.objects.filter(id=borrow_pk, status='returned')
-        # Fallback: return all returned records
-        return BorrowRecord.objects.filter(status='returned')
+        return BorrowRecord.objects.all()
 
-    def get_serializer_context(self):
-        context = super().get_serializer_context()
-        borrow_pk = self.kwargs.get('borrow_pk')
-        if borrow_pk:
-            context['borrow_id'] = borrow_pk
-        return context
+    def perform_create(self, serializer):
+        serializer.save(borrowed_at=datetime.now())
+
+class ReturnViewSet(ModelViewSet):
+    http_method_names = ['delete', 'get']  # Add 'post' if you want to create returns
+    serializer_class = BorrowSerializer  # Required by DRF
+    def get_queryset(self):
+        return BorrowRecord.objects.filter(
+            status__iexact='returned'
+        )
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        # Mark all associated books as available
+        borrow_items = BorrowItem.objects.filter(borrow=instance)
+        for item in borrow_items:
+            book = item.book
+            book.availability_status = True
+            book.save()
+        return super().destroy(request, *args, **kwargs)
 
 class BorrowItemViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'patch', 'delete']
